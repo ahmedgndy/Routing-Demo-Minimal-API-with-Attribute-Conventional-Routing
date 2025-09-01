@@ -13,4 +13,12 @@ public class OrdersController : ControllerBase
     {
         return Ok(new[] { "order1", "order2", "order3" });
     }
-}
+
+    //get all orders
+    [HttpGet("{id:int:range(10,20)}")]
+    public IActionResult GetAllOrdersById(int id)
+    {
+        return Ok(new[] { $"order{id}" });
+    }
+    
+ }

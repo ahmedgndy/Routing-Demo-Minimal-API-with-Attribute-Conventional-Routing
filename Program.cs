@@ -4,8 +4,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 var app = builder.Build();
 
+//use controllers 
 app.MapControllers();
-app.MapGet("/order/{id:int}", (int id, LinkGenerator link, HttpContext context) =>
+app.MapGet("generate/order/{id:int}", (int id, LinkGenerator link, HttpContext context) =>
 {
     //updateOrder this is the endpoint
     // id the rout paramater 
