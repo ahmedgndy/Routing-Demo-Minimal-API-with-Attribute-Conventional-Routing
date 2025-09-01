@@ -1,6 +1,10 @@
 var builder = WebApplication.CreateBuilder(args);
+
+//Add all services to deal with the controller
+builder.Services.AddControllers();
 var app = builder.Build();
 
+app.MapControllers();
 app.MapGet("/order/{id:int}", (int id, LinkGenerator link, HttpContext context) =>
 {
     //updateOrder this is the endpoint
