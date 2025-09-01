@@ -1,5 +1,5 @@
 
-public class MothConstraints : IRouteConstraint
+public class MonthConstraints : IRouteConstraint
 {
     public bool Match(HttpContext? httpContext, IRouter? route, string routeKey, RouteValueDictionary values, RouteDirection routeDirection)
     {

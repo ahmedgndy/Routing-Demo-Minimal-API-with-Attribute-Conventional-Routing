@@ -20,5 +20,12 @@ public class OrdersController : ControllerBase
     {
         return Ok(new[] { $"order{id}" });
     }
-    
+
+    //using custom Constraint
+    [HttpGet("month/{month:int:monthConstraints}")]
+    public IActionResult GetOrdersByMonth(int month)
+    {
+        return Ok(new[] { $"order1 from month {month}", $"order2 from month {month}", $"order3 from month {month}" });
+    }
+
  }
